@@ -1,0 +1,67 @@
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media screen {
+    .container{
+        width:375px;
+    }
+    body{
+        width: 375px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 375px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+.navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    background-color: rgba(242, 242, 242, 1);
+    height: 30px;
+}
+body{
+    padding-top: 30px;
+    min-width: 320px;
+}
+li{
+   float: left;
+    list-style: none;
+    padding-left: 10px;
+    width: 30px;
+}
+.logo{
+    width: 40px;
+    height: 30px;
+}
+.push-right{
+    float: right;
+    vertical-align: middle;
+}
+.navbar p{
+    margin: 0;
+}
