@@ -2,7 +2,7 @@
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media screen {
@@ -64,4 +64,87 @@ li{
 }
 .navbar p{
     margin: 0;
+}
+.container p{
+    float: left;
+    margin-top: 3px;
+}
+.search{
+    float: right;
+    margin-top: 8px;
+    background-image: url("mheader@2x.png");
+    background-size: 96px 96px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.default{
+    background-position: -24px 0;
+}
+.sel{
+    background-position: -72px 0;
+}
+.hidden{
+    display: none;
+}
+.media {
+    margin-top: 15px
+}
+
+.media:first-child {
+    margin-top: 0
+}
+
+.media,
+.media-body {
+    overflow: hidden;
+    zoom: 1
+}
+
+.media-body {
+    width: 10000px
+}
+
+.media-object {
+    display: block
+}
+
+.media-object.img-thumbnail {
+    max-width: none
+}
+
+.media-right,
+.media>.pull-right {
+    padding-left: 10px
+}
+
+.media-left,
+.media>.pull-left {
+    padding-right: 10px
+}
+
+.media-body,
+.media-left,
+.media-right {
+    display: table-cell;
+    vertical-align: top
+}
+
+.media-middle {
+    vertical-align: middle
+}
+
+.media-bottom {
+    vertical-align: bottom
+}
+
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
+.media-list {
+    padding-left: 0;
+    list-style: none
 }
