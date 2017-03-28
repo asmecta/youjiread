@@ -4,7 +4,6 @@
     margin-right: auto;
     margin-left: auto;
 }
-
 @media screen {
     .container{
         width:375px;
@@ -15,7 +14,7 @@
 }
 @media (min-width: 768px) {
     .container {
-        width: 375px;
+        width: 768px;
     }
 }
 
@@ -24,7 +23,6 @@
         width: 970px
     }
 }
-
 @media (min-width: 1200px) {
     .container {
         width: 1170px
@@ -45,7 +43,7 @@
     height: 30px;
 }
 body{
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     min-width: 320px;
 }
 li{
@@ -95,56 +93,82 @@ li{
 .media:first-child {
     margin-top: 0
 }
-
 .media,
 .media-body {
     overflow: hidden;
     zoom: 1
 }
-
 .media-body {
     width: 10000px
 }
-
 .media-object {
     display: block
 }
-
-.media-object.img-thumbnail {
-    max-width: none
+.media-object {
+    max-width: 100px;
+    height: 100px;
 }
-
 .media-right,
 .media>.pull-right {
     padding-left: 10px
 }
-
 .media-left,
 .media>.pull-left {
     padding-right: 10px
 }
-
 .media-body,
 .media-left,
 .media-right {
     display: table-cell;
     vertical-align: top
 }
-
 .media-middle {
     vertical-align: middle
 }
-
 .media-bottom {
     vertical-align: bottom
 }
-
 .media-heading {
     margin-top: 0;
     margin-bottom: 5px
 }
-
 .media-list {
     padding-left: 0;
     list-style: none
+}
+.media-left{
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+#sBar input{
+    margin-left: 5px;
+    margin-right: 5px;
+    width:100%;
+    margin-bottom: 15px;
+    border:0;
+    border-bottom: 1px solid;
+    border-color: #a5a5a5;
+}
+.summary{
+    overflow: hidden;
+    font-size: 12px;
+    color: #848689;
+    margin-top: 10px;
+    height: 50px;
+}
+.title{
+    color: #232326;
+    font-size: 15px;
+    line-height: 22px;
+}
+.author{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: #848689;
+    margin-top: 0px;
 }
