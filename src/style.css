@@ -1,6 +1,6 @@
 /*
 * author: aSmecta
-* version:v0.0.2
+* version:v0.0.3
 * Freedom
 */
 .container{
@@ -76,7 +76,6 @@ li{
 .search{
     float: right;
     margin-top: 8px;
-    background-image: url("mheader@2x.png");
     background-size: 96px 96px;
     display: inline-block;
     width: 16px;
@@ -158,7 +157,7 @@ li{
     border-bottom: 1px solid;
     border-color: #a5a5a5;
 }
-.summary{
+.summary,.half,.col-md-12{
     overflow: hidden;
     font-size: 12px;
     color: #848689;
@@ -192,7 +191,7 @@ li{
     left: 0;
     z-index: 1050;
     display: block;
-    overflow: hidden;
+    overflow: scroll;
     -webkit-overflow-scrolling: touch;
     outline: 0
 }
@@ -220,7 +219,6 @@ li{
 .modal-dialog {
     position: relative;
     width: auto;
-    margin: 10px
 }
 
 .modal-content {
@@ -230,7 +228,6 @@ li{
     background-clip: padding-box;
     border: 1px solid #999;
     border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 6px;
     outline: 0;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
@@ -278,7 +275,8 @@ li{
 .modal-footer {
     padding: 15px;
     text-align: right;
-    border-top: 1px solid #e5e5e5
+    border-top: 1px solid #e5e5e5;
+    margin-top: 5px;
 }
 
 .modal-footer .btn+.btn {
@@ -341,13 +339,57 @@ li{
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
+    box-sizing: border-box;
 }
 .btn-default{
     color: #333;
     background-color: #ffffff;
     border-color: #ccc;
+    margin: 5px 0;
 }
 .btn-douban{
     color: #ffffff;
     background-color: #072;
+}
+.center{
+    width:100%;
+    border: 0;
+    font-size: 10px;
+    color: #ccc;
+}
+.media-summary{
+    border-bottom: 1px solid;
+    border-color: #ccc;
+    padding-bottom: 15px;
+}
+.media-summary > .summary{
+    height: 50px;
+    overflow: hidden;
+}
+.media-summary > h4{
+    font-size: 13px;
+
+}
+.half{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    float: left;
+}
+.col-md-12{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    float: left;
+}
+.half > h5,.col-md-12 > h5{
+    margin: 10px 0 5px 0;
+    color: #000;
+}
+a {
+    text-decoration: none;
+}
+#img{
+    width: 100%;
+    height: auto;
 }
