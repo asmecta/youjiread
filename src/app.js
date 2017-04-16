@@ -22,7 +22,13 @@ xmlhttp.onreadystatechange=function()
     {
         var book = eval ("(" + xmlhttp.responseText + ")");
         for (var i = 0; i<book.length;i++){
-            var mediaHtml ='<div class="media" id="'+ book[i].isbn13 + '" onclick="addJs(this.id)"><div class="media-left"><a><img class="media-object" src="'+ book[i].image +'" alt="' + book[i].title + '"></a></div><div class="media-body"><span class="media-heading title">' + book[i].title + '</span><span class="subtitle">' +book[i].subtitle + '</span> <div class="author">' + book[i].author + '</div><div class="summary">' + book[i].summary.replace("\n","<br>") + '</div></div></div>';
+            var mediaHtml ='<div class="media" id="'+ book[i].isbn13
+                + '" onclick="addJs(this.id)"><div class="media-left"><a><img class="media-object" src="'+ book[i].image
+                +'" alt="' + book[i].title
+                + '"></a></div><div class="media-body"><span class="media-heading title">' + book[i].title
+                + '</span><span class="subtitle">' +book[i].subtitle
+                + '</span> <div class="author">' + book[i].author
+                + '</div><div class="summary">' + book[i].summary.replace("\n","<br>") + '</div></div></div>';
             books.innerHTML += mediaHtml;
         }
     }

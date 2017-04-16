@@ -8,12 +8,14 @@ var gulp = require('gulp'),
     csso = require('gulp-csso'),
     filter = require('gulp-filter'),
     RevAll = require('gulp-rev-all'),
-    del = require('del');
+    del = require('del'),
+    jsonMinify = require('gulp-json-minify');
 
 gulp.task('default', ['del'], function () {
     var jsFilter = filter('**/*.js', {restore: true}),
         cssFilter = filter('**/*.css', {restore: true}),
-        htmlFilter = filter(['**/*.html'], {restore: true});
+        htmlFilter = filter(['**/*.html'], {restore: true}),
+        jsonFilter = filter(['**/*.json'],{restore:true});
     gulp.src('./src/*')
         .pipe(useref())                         // 解析html中的构建块
         .pipe(jsFilter)                         // 过滤所有js
@@ -22,6 +24,9 @@ gulp.task('default', ['del'], function () {
         .pipe(cssFilter)                        // 过滤所有css
         .pipe(csso())                           // 压缩优化css
         .pipe(cssFilter.restore)
+        .pipe(jsonFilter)
+        .pipe(jsonMinify())
+        .pipe(jsonFilter.restore)
         .pipe(RevAll.revision({                 // 生成版本号
             dontRenameFile: ['.html'],          // 不给 html 文件添加版本号
             dontUpdateReference: ['.html']      // 不给文件里链接的html加版本号
@@ -36,8 +41,8 @@ gulp.task('del', function () {
     del('./dist');
 });
 
-gulp.task('ugly',function () {
+gulp.task('ugly', function () {
     gulp.src('./src/app.js')
         .pipe(uglify())
         .pipe(gulp.dest('./dist'));
-})
+});
