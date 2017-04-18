@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <link href="style.css?v0.0.2" rel="stylesheet">
-    <title>友寄读书 自由阅读</title>
+    <link href="style.css" rel="stylesheet">
+    <title>友寄读书</title>
 </head>
 <body>
 <header class="hidden">
@@ -19,31 +19,75 @@
 </div>
 </header>
 
-<div class="container" id="book">
+<div class="container" id="book" style="display: block;">
 </div>
-<div class="modal fade in" id="bookDetail">
+<div class="modal fade in" id="bookDetail" style="display:none;">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" ><sapn>x</sapn></button>
-                <h4 class="modal-title"></h4>
+                <h4 class="modal-title"><span id="title"></span>
+                    <span class="subtitle" id="subtitle"></span></h4>
             </div>
-            <div class="modal-body">
-                <span>黑天鹅</span>
-                <span class="subtitle">如何应对不可预知的未来</span>
-                <span class="author">纳西姆•尼古拉斯•塔勒布 (Nassim Nicholas Taleb)</span>
+            <div class="media-summary" style="border: 0">
+                <img src="" alt="" id="img">
+            </div>
+            <div class="modal-body" style="overflow-y: auto; ">
+                <span class="author" id="author"></span>
                 <div class="media-summary">
-                    <span class="summary">在发现澳大利亚的黑天鹅之前，欧洲人认为天鹅都是白色的，“黑天鹅”曾经是他们言谈和写作中的惯用语，用来指不可能存在的事物，但当第一只黑天鹅出现时，这个不可动摇的信念崩溃了。黑天鹅的存在，寓示不可预测的重大稀有事件，它们常常带来意料之外的重大冲击，但人们总是视而不见，并习惯于以自己有限的生活经验和不堪一击的信念来解释它们，最终被现实击溃。    从金融危机到四川大地震，从“泰坦尼克号”的沉没到“9-11”恐怖袭击事件，黑天鹅存在于各个领域，无论金融市场、商业、经济还是个人生活，都逃不过它的控制。《黑天鹅:如何应对不可预知的未来(升级版)(全新校订本)》深入介绍了黑天鹅事件的本质和规律，发掘出我们所不知道的事情背后的真正价值，教会我们如何认识这个社会的运行方式，如何避免小概率事件带来的重大损失，如何在不确定的世界中占得先机。    由纳西姆·尼古拉斯·塔勒布编著的《黑天鹅》出版后，震惊世界的黑天鹅事件——金融危机随即爆发。在出版3年后，作者经过3年沉淀与思考，增加全新后记，深刻分析黑天鹅理论在现代社会的应用，以及我们如何真正地评估并利用黑天鹅带来的机会，以从中受益。《黑天鹅》必将颠覆我们惯常的思维，让你重新把握自己的命运。</span>
-                    <a class="btn btn-default center" onclick="showDetails(this)">查看更多</a>
+                    <h4>简介</h4>
+                    <div class="summary" id="summary"></div>
+                    <a class="btn btn-default center" onclick="showMore(this,'summary')">查看更多</a>
+                </div>
+                <div class="media-summary">
+                    <h4>作者简介</h4>
+                    <div class="summary" id="author_intro"></div>
+                    <a class="btn btn-default center" onclick="showMore(this,'author_intro')">查看更多</a>
+                </div>
+                <div class="media-summary" style="border: 0px">
+                    <h4>其他信息</h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>原书名</h5>
+                            <div id="origin_title" style="height: auto"></div>
+                        </div>
+                        <div class="half">
+                            <h5>译者</h5>
+                            <div id="translator"></div>
+                        </div>
+                        <div class="half">
+                            <h5>定价</h5>
+                            <div id="price"></div>
+                        </div>
+                        <div class="half">
+                            <h5>出版社</h5>
+                            <div id="publisher"></div>
+                        </div>
+                        <div class="half">
+                            <h5>出版日期</h5>
+                            <div id="pubdate"></div>
+                        </div>
+                        <div class="half">
+                            <h5>装帧</h5>
+                            <div id="binding"></div>
+                        </div>
+                        <div class="half">
+                            <h5>页数</h5>
+                            <div id="pages"></div>
+                        </div>
+                        <div class="half">
+                            <h5>ISBN</h5>
+                            <div id="isbn13"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="modal-fotter">
-                <button type="button" class="btn btn-default">关闭</button>
-                <button type="button" class="btn btn-douban">豆瓣阅读</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="hiddenDetails()">关闭</button>
+                <button type="button" class="btn btn-douban" ><a id="dburl" href="" style="color: #fff;">豆瓣阅读</a> </button>
             </div>
         </div>
     </div>
 </div>
-<script src="app.js?v0.0.2"></script>
+<script src="app.js"></script>
 </body>
 </html>
