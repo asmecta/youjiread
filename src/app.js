@@ -2,7 +2,7 @@
  * version:v0.0.4
  * Created by Administrator on 2017/3/26.
  */
-'use trict'
+'use strict'
 var b =document.getElementsByClassName('search')[0];
 b.addEventListener('click',function () {
     var a = document.getElementById('sBar');
