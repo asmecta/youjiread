@@ -12,5 +12,24 @@
     "gulp-uglify": "^2.1.2",
     "gulp-useref": "^3.1.2",
     "request": "^2.81.0"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "scripts": {
+    "start": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaoxiangpo2007/youjiread.git"
+  },
+  "author": "aSmecta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiaoxiangpo2007/youjiread/issues"
+  },
+  "homepage": "https://github.com/jiaoxiangpo2007/youjiread#readme"
 }
